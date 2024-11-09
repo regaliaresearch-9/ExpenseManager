@@ -36,7 +36,7 @@ st.title("Daily Expense Manager")
 
 
 # Input fields for adding an expense
-with st.form(key='expense_form'):
+with st.form(key='expense_form',clear_on_submit=True):
     date = st.date_input("Date")
     description = st.text_input("Description","Text")
     amount = st.number_input("Amount (INR)", min_value=0.0)
