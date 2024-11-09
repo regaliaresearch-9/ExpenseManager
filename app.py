@@ -19,13 +19,13 @@ st.markdown('<style>div.block-container{padding-top:5rem;}</style>',unsafe_allow
 
 
 credentials = {
-    'usernames': {
+    st.secrets["username"]: {
         'admin': {
             'email': 'jsmith@gmail.com',
             'failed_login_attempts': 0,  # Will be managed automatically
             'logged_in': False,           # Will be managed automatically
             'name': 'Admin',
-            'password':  'abc',            # Will be hashed automatically
+            'password':  st.secrets["pass"],            # Will be hashed automatically
             'roles': ['admin', 'editor', 'viewer']
         }
     }
